@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://oxbb85s6o22x"]
+
+[ext_resource type="Script" uid="uid://det0c54wffab7" path="res://scripts/player.gd" id="1_d3bik"]
+[ext_resource type="Texture2D" uid="uid://cbeyhscygtxn0" path="res://assets/Water.png" id="1_iutcl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3bik"]
+size = Vector2(70, 98)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iutcl"]
+atlas = ExtResource("1_iutcl")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3bik"]
+atlas = ExtResource("1_iutcl")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yulri"]
+atlas = ExtResource("1_iutcl")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hynqm"]
+atlas = ExtResource("1_iutcl")
+region = Rect2(320, 320, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mp1pd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iutcl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3bik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yulri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hynqm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Theguy" type="Node2D" unique_id=798270208]
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=1214553283]
+script = ExtResource("1_d3bik")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=604915232]
+position = Vector2(-1, 4)
+shape = SubResource("RectangleShape2D_d3bik")
+debug_color = Color(1.540184e-06, 0.56732833, 0.85925174, 0.41960785)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="player" unique_id=1539946904]
+sprite_frames = SubResource("SpriteFrames_mp1pd")
+autoplay = "default"
+frame_progress = 0.4887023
