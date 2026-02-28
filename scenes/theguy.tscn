@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cyp1uayj78m6w"]
 
-[ext_resource type="Script" uid="uid://det0c54wffab7" path="res://scripts/player.gd" id="1_d3bik"]
+[ext_resource type="Script" uid="uid://juggo6jcfrqs" path="res://scenes/theguy.gd" id="1_dat5t"]
 [ext_resource type="Texture2D" uid="uid://doshs0sah14w5" path="res://assets/guy_sprites.png" id="2_d3bik"]
 [ext_resource type="Texture2D" uid="uid://b6qjjraa4b7am" path="res://assets/guy_chopping.png" id="2_yulri"]
 [ext_resource type="Script" uid="uid://g8nl6i3ouuxe" path="res://scripts/actions.gd" id="3_yulri"]
@@ -158,17 +158,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Theguy" type="Node2D" unique_id=798270208]
+[node name="Theguy" type="CharacterBody2D" unique_id=1929062567]
+script = ExtResource("1_dat5t")
 
-[node name="player" type="CharacterBody2D" parent="." unique_id=1214553283]
-script = ExtResource("1_d3bik")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=604915232]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=604915232]
 position = Vector2(-1, 4)
 shape = SubResource("RectangleShape2D_d3bik")
 debug_color = Color(1.540184e-06, 0.56732833, 0.85925174, 0.41960785)
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="player" unique_id=1539946904]
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1539946904]
 sprite_frames = SubResource("SpriteFrames_mp1pd")
 animation = &"chopping"
 autoplay = "idle"

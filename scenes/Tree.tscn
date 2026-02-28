@@ -1,26 +1,24 @@
 [gd_scene format=3 uid="uid://h2siy66kck0"]
 
 [ext_resource type="Texture2D" uid="uid://dytesrdkecwoa" path="res://assets/emojis-free/Emoji_Spritesheet_Free.png" id="1_2cic4"]
-[ext_resource type="Script" uid="uid://dl3ua5wv7cdst" path="res://scenes/tree.gd" id="1_omb14"]
+[ext_resource type="Script" uid="uid://xk6xmea3htno" path="res://scripts/tree.gd" id="1_omb14"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_874r4"]
 atlas = ExtResource("1_2cic4")
-region = Rect2(2.6550674, 447.7222, 26.649124, 31.515472)
+region = Rect2(3.01054, 447.53058, 26.12246, 32.86374)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qvbew"]
-size = Vector2(15.058819, 21.168402)
+size = Vector2(14, 20)
 
-[node name="Sprite2D" type="Area2D" unique_id=2023587826]
-position = Vector2(7.1525574e-07, -12)
-scale = Vector2(0.7968749, 0.7767135)
+[node name="Area2D" type="Area2D" unique_id=2104442178]
 script = ExtResource("1_omb14")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1463864869]
-position = Vector2(-8.9757594e-07, 0)
-scale = Vector2(1.0000002, 1)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1204987900]
+position = Vector2(0, -16)
 texture = SubResource("AtlasTexture_874r4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=677509409]
-position = Vector2(-1.907349e-06, 5.4342976)
-scale = Vector2(1.0000005, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1248298318]
+position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_qvbew")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
