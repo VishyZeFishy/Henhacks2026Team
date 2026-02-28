@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://dlohy2lfpx7rg"]
 
+[ext_resource type="Script" uid="uid://mm7ixtpv23cb" path="res://scenes/components/hurt.gd" id="1_ppyvk"]
+
 [node name="Hurt" type="Area2D" unique_id=1313376190]
+script = ExtResource("1_ppyvk")
