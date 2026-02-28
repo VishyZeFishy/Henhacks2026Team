@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://oxbb85s6o22x"]
+[gd_scene format=3 uid="uid://cyp1uayj78m6w"]
 
 [ext_resource type="Script" uid="uid://det0c54wffab7" path="res://scripts/player.gd" id="1_d3bik"]
 [ext_resource type="Texture2D" uid="uid://cbeyhscygtxn0" path="res://assets/Water.png" id="1_iutcl"]
+[ext_resource type="Script" uid="uid://g8nl6i3ouuxe" path="res://scripts/actions.gd" id="3_yulri"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3bik"]
 size = Vector2(70, 98)
@@ -56,3 +57,6 @@ debug_color = Color(1.540184e-06, 0.56732833, 0.85925174, 0.41960785)
 sprite_frames = SubResource("SpriteFrames_mp1pd")
 autoplay = "default"
 frame_progress = 0.4887023
+
+[node name="Node" type="Node" parent="." unique_id=1735325601]
+script = ExtResource("3_yulri")
