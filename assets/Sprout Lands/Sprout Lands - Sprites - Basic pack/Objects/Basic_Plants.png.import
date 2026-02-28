@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dypbxc4dxs2bn"
-path="res://.godot/imported/Sprout Lands defautlt palette.png-3623c081411f268e003b29ae96113fac.ctex"
+uid="uid://p4knb8bfpf68"
+path="res://.godot/imported/Basic_Plants.png-7ebbe5fb71d71d707327511e2aa76790.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprout Lands color pallet/Sprout Lands defautlt palette.png"
-dest_files=["res://.godot/imported/Sprout Lands defautlt palette.png-3623c081411f268e003b29ae96113fac.ctex"]
+source_file="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Objects/Basic_Plants.png"
+dest_files=["res://.godot/imported/Basic_Plants.png-7ebbe5fb71d71d707327511e2aa76790.ctex"]
 
 [params]
 
