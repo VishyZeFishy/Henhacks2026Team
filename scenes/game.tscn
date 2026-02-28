@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dpdcidqm4uvsb"]
 
-[ext_resource type="Texture2D" uid="uid://cbvtd7mrie0bf" path="res://assets/world_tileset.png" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://emd1s7ehu6ox" path="res://assets/world_tileset.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://oxbb85s6o22x" path="res://scenes/theguy.tscn" id="2_yqjtg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqjtg"]
 texture = ExtResource("1_uwrxv")
@@ -174,3 +175,11 @@ sources/0 = SubResource("TileSetAtlasSource_yqjtg")
 tile_set = SubResource("TileSet_lnu2h")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 65536, 0, 1, 65537, 0, 1, 65538, 0, 1, 65539, 0, 1, 131075, 0, 1, 131074, 0, 1, 131073, 0, 1, 131072, 0, 1, 65540, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131076, 0, 1, 196612, 0, 1, 196613, 0, 1, 196614, 0, 1, 196615, 0, 1, 196611, 0, 1, 196610, 0, 1, 196609, 0, 1, 196608, 0, 1, 262144, 0, 1, 262145, 0, 1, 262146, 0, 1, 327682, 0, 1, 327683, 0, 1, 327684, 0, 1, 262148, 0, 1, 262149, 0, 1, 262150, 0, 1, 262151, 0, 1, 262147, 0, 1, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 131080, 0, 1, 131081, 0, 1, 131082, 0, 1, 196618, 0, 1, 196617, 0, 1, 196616, 0, 1, 11, 0, 0, -65524, 0, 0, -131059, 0, 0, 65547, 0, 1, 65548, 0, 1, 65549, 0, 1, 13, 0, 1, 14, 0, 1, -65523, 0, 1, 12, 0, 1, 131083, 0, 1, 131084, 0, 1, 131085, 0, 1, -131058, 0, 0, -131056, 0, 0, -131057, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0)
+
+[node name="Theguy" parent="." unique_id=798270208 instance=ExtResource("2_yqjtg")]
+position = Vector2(37, -51.000004)
+scale = Vector2(0.15, 0.15)
+
+[node name="Camera2D" type="Camera2D" parent="Theguy" unique_id=663913735]
+position = Vector2(0, 2.5431314e-05)
+zoom = Vector2(2.4, 2.4)
