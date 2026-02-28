@@ -10,7 +10,7 @@ region = Rect2(3.01054, 447.53058, 26.12246, 32.86374)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qvbew"]
 size = Vector2(14, 20)
 
-[node name="Area2D" type="Area2D" unique_id=2104442178]
+[node name="Tree" type="Area2D" unique_id=2104442178]
 script = ExtResource("1_omb14")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1204987900]
