@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://h2siy66kck0"]
+
+[ext_resource type="Texture2D" uid="uid://dytesrdkecwoa" path="res://assets/emojis-free/Emoji_Spritesheet_Free.png" id="1_2cic4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omb14"]
+atlas = ExtResource("1_2cic4")
+region = Rect2(2.5200195, 448.488, 27.104004, 31.94403)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_874r4"]
+radius = 8.0
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1268799865]
+position = Vector2(7.1525574e-07, -12)
+scale = Vector2(0.7968749, 0.7767135)
+texture = SubResource("AtlasTexture_omb14")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=522638014]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=677509409]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_874r4")
