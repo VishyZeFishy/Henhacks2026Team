@@ -14,5 +14,4 @@ func _process(delta: float) -> void:
 func _input(interact) -> void:
 	if event.is_action_pressed("interact"):
 			
-func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
+ # Replace with function body.
