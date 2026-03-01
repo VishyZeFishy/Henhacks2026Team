@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b7hqs8xl1yf1"]
+
+[ext_resource type="Script" uid="uid://dw08dbucjhs78" path="res://credits.gd" id="1_0ctdu"]
+[ext_resource type="Texture2D" uid="uid://c38yphk17pi54" path="res://assets/backgroundthing.png" id="2_2fbfq"]
+[ext_resource type="FontFile" uid="uid://c2wnv4lol7rcj" path="res://assets/fonts/pixelFont-7-8x14-sproutLands.ttf" id="3_8gwij"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mah5v"]
+atlas = ExtResource("2_2fbfq")
+
+[node name="credits" type="Node2D" unique_id=1428938148]
+script = ExtResource("1_0ctdu")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=990644849]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1047087433]
+position = Vector2(-0.2000122, -2.422409)
+scale = Vector2(8.925, 10.10695)
+texture = SubResource("AtlasTexture_mah5v")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1914667033]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1870669820]
+
+[node name="playagain" type="Button" parent="." unique_id=1021373282]
+offset_left = 321.0
+offset_top = 218.0
+offset_right = 514.0
+offset_bottom = 279.0
+theme_override_fonts/font = ExtResource("3_8gwij")
+theme_override_font_sizes/font_size = 32
+text = "PLAY AGAIN"
+
+[node name="titlepage" type="Button" parent="." unique_id=2129022347]
+modulate = Color(0.6724483, 0.9080807, 0.5093402, 1)
+offset_left = 105.0
+offset_top = 219.0
+offset_right = 298.0
+offset_bottom = 280.0
+theme_override_fonts/font = ExtResource("3_8gwij")
+theme_override_font_sizes/font_size = 32
+text = "MAIN MENU
+"
+
+[connection signal="pressed" from="playagain" to="." method="_on_playagain_pressed"]
+[connection signal="pressed" from="titlepage" to="." method="_on_titlepage_pressed"]

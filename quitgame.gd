@@ -1,7 +1,6 @@
 extends Label
 
 func _on_quitbutton_pressed() -> void:
-	if Globalcounter.count >= 50 or not (Globalcounter.count - 50) < 0:
+	if Global.wood >= 100000:
 		get_tree().quit()
 	
-	pass 

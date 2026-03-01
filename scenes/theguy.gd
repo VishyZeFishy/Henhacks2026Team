@@ -52,16 +52,14 @@ func _physics_process(delta: float) -> void:
 
 
 func interaction() -> void:
+		
 	is_interacting = true
 	if Global.stage == 0:
 		animate.play("planting")
-		print("Plane")
 	elif Global.stage == 1:
 		animate.play("watering")
-		print("Water")
 	else:
 		animate.play("chopping")
-		print("Chop")
 	timer.start()
 
 func _on_timer_timeout() -> void:

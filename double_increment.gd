@@ -1,9 +1,14 @@
 extends Label
 
+@onready var quadruple: Label = $"."
 
+var cost4 = Global.get_upgrade_cost(4)
+
+func _process(delta: float) -> void:
+	quadruple.text = "Quadruple Increment \nCOST: " +str(cost4)
+	
+	
 func _on_double_increment_button_pressed() -> void:
-	#if Globalcounter.count >= 1000 or not (Globalcounter.count - 1000) < 0:
-		#Globalcounter.countdecrease(1000)
-		#Globalcounter.change_increment(Globalcounter.increment*2)
-	pass
-	# Replace with function body.
+	Global.increase_rate(cost4,4)
+	print(Global.min)
+	print(Global.power)

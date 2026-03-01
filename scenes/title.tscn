@@ -1,26 +1,43 @@
 [gd_scene format=3 uid="uid://djelt2jrjcrub"]
 
 [ext_resource type="Script" uid="uid://x1n87u88b4i7" path="res://scenes/title.gd" id="1_4ignj"]
-[ext_resource type="Texture2D" uid="uid://bn38ccwe354l4" path="res://assets/TitleScreen.png" id="2_wosw1"]
+[ext_resource type="Texture2D" uid="uid://bu8yblwijcgqf" path="res://assets/titlenew.png" id="2_p6dhs"]
+[ext_resource type="FontFile" uid="uid://c2wnv4lol7rcj" path="res://assets/fonts/pixelFont-7-8x14-sproutLands.ttf" id="3_pyl7j"]
 
-[node name="Node2D" type="Node2D" unique_id=957776577]
+[node name="title" type="Node2D" unique_id=957776577]
 script = ExtResource("1_4ignj")
-
-[node name="SceneButton" type="Button" parent="." unique_id=1570954943]
-offset_left = -48.0
-offset_top = -20.0
-offset_right = 48.0
-offset_bottom = 14.0
-text = "PLAY"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1389116831]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=798224791]
-position = Vector2(4, 99)
-scale = Vector2(1.825, 1.021551)
-texture = ExtResource("2_wosw1")
+position = Vector2(-0.2000122, -2.422409)
+scale = Vector2(8.925, 10.10695)
+texture = ExtResource("2_p6dhs")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1680428780]
-color = Color(0.654902, 0.5411765, 0.29803923, 1)
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1798596560]
+
+[node name="start" type="Button" parent="." unique_id=1570954943]
+offset_left = 321.0
+offset_top = 218.0
+offset_right = 514.0
+offset_bottom = 279.0
+theme_override_fonts/font = ExtResource("3_pyl7j")
+theme_override_font_sizes/font_size = 32
+text = "PLAY"
+
+[node name="credits" type="Button" parent="." unique_id=217889349]
+visible = false
+modulate = Color(0.6724483, 0.9080807, 0.5093402, 1)
+offset_left = 105.0
+offset_top = 219.0
+offset_right = 298.0
+offset_bottom = 280.0
+theme_override_fonts/font = ExtResource("3_pyl7j")
+theme_override_font_sizes/font_size = 32
+text = "CREDITS
+"
+
+[connection signal="pressed" from="start" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="credits" to="." method="_on_scene_button_2_pressed"]

@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://b2e1wqttdch3f"]
+
+[ext_resource type="Script" uid="uid://bn1pqnbwygxjv" path="res://scenes/endscene.gd" id="1_pvywr"]
+[ext_resource type="Texture2D" uid="uid://c38yphk17pi54" path="res://assets/backgroundthing.png" id="1_r8m18"]
+[ext_resource type="FontFile" uid="uid://c2wnv4lol7rcj" path="res://assets/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_pvywr"]
+[ext_resource type="Script" uid="uid://bg7gi36ccm2c5" path="res://singleincrementtext.gd" id="4_m0gyy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0gyy"]
+atlas = ExtResource("1_r8m18")
+
+[node name="end" type="Node2D" unique_id=1978398720]
+script = ExtResource("1_pvywr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=590579893]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1936689993]
+position = Vector2(-0.2000122, -2.422409)
+scale = Vector2(8.925, 10.10695)
+texture = SubResource("AtlasTexture_m0gyy")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1007612439]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=383546696]
+
+[node name="playagain" type="Button" parent="." unique_id=914023899]
+offset_left = 321.0
+offset_top = 218.0
+offset_right = 514.0
+offset_bottom = 279.0
+theme_override_fonts/font = ExtResource("2_pvywr")
+theme_override_font_sizes/font_size = 32
+text = "PLAY AGAIN"
+
+[node name="credits" type="Button" parent="." unique_id=616643710]
+modulate = Color(0.6724483, 0.9080807, 0.5093402, 1)
+offset_left = 105.0
+offset_top = 219.0
+offset_right = 298.0
+offset_bottom = 280.0
+theme_override_fonts/font = ExtResource("2_pvywr")
+theme_override_font_sizes/font_size = 32
+text = "CREDITS
+"
+
+[node name="sentence1" type="Label" parent="." unique_id=850984408 node_paths=PackedStringArray("double")]
+offset_left = -551.0
+offset_top = -306.0
+offset_right = 1757.6621
+offset_bottom = -150.0
+scale = Vector2(0.4773327, 0.54438955)
+theme_override_fonts/font = ExtResource("2_pvywr")
+theme_override_font_sizes/font_size = 64
+text = "You chopped down 42 million trees in one day.
+
+this is how many trees are cut down each day, on average."
+uppercase = true
+script = ExtResource("4_m0gyy")
+double = NodePath(".")
+
+[node name="sentence2" type="Label" parent="." unique_id=707454558 node_paths=PackedStringArray("double")]
+offset_left = -549.0
+offset_top = -173.0
+offset_right = 1759.6621
+offset_bottom = -17.0
+scale = Vector2(0.4773327, 0.54438955)
+theme_override_fonts/font = ExtResource("2_pvywr")
+theme_override_font_sizes/font_size = 64
+text = "42, 000, 000 trees/day x 365 DAYS ="
+uppercase = true
+script = ExtResource("4_m0gyy")
+double = NodePath(".")
+
+[node name="sentence3" type="Label" parent="." unique_id=966570753 node_paths=PackedStringArray("double")]
+offset_left = -547.0
+offset_top = -119.0
+offset_right = 1761.6621
+offset_bottom = 37.0
+scale = Vector2(0.4773327, 0.54438955)
+theme_override_fonts/font = ExtResource("2_pvywr")
+theme_override_font_sizes/font_size = 128
+text = "15 billion trees an year"
+uppercase = true
+script = ExtResource("4_m0gyy")
+double = NodePath(".")
+
+[connection signal="pressed" from="playagain" to="." method="_on_playagain_pressed"]
+[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
