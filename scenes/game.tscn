@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cbvtd7mrie0bf" path="res://assets/world_tileset.png" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://h2siy66kck0" path="res://scenes/Tree.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cyp1uayj78m6w" path="res://scenes/theguy.tscn" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://bxsv8x1s03cqy" path="res://scripts/camera_2d.gd" id="4_lbhrr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqjtg"]
 texture = ExtResource("1_uwrxv")
@@ -186,6 +187,8 @@ scale = Vector2(0.15, 0.15)
 [node name="Camera2D" type="Camera2D" parent="Theguy" unique_id=669924532]
 position = Vector2(613.33325, -19.999985)
 scale = Vector2(6.6666665, 6.6666665)
+process_callback = 0
 limit_enabled = false
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+script = ExtResource("4_lbhrr")
