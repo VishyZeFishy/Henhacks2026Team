@@ -1152,7 +1152,7 @@ gravity_scale = 0.0
 [node name="Tree3" parent="RigidBody2D3" unique_id=895488669 instance=ExtResource("1_hiqwa")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3" unique_id=224645878]
-position = Vector2(0, -13.5)
+position = Vector2(0, -13)
 shape = SubResource("RectangleShape2D_2u3nc")
 
 [node name="RigidBody2D9" type="RigidBody2D" parent="." unique_id=1430880938]
@@ -1162,7 +1162,7 @@ gravity_scale = 0.0
 [node name="Tree4" parent="RigidBody2D9" unique_id=2117573260 instance=ExtResource("1_hiqwa")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D9" unique_id=1006323637]
-position = Vector2(0, -13.5)
+position = Vector2(-41, 110)
 shape = SubResource("RectangleShape2D_2u3nc")
 
 [node name="RigidBody2D8" type="RigidBody2D" parent="." unique_id=544713011]
@@ -1173,7 +1173,7 @@ gravity_scale = 0.0
 position = Vector2(-112, 22)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D8" unique_id=713685591]
-position = Vector2(0, -13.5)
+position = Vector2(191, 178)
 shape = SubResource("RectangleShape2D_2u3nc")
 
 [node name="RigidBody2D7" type="RigidBody2D" parent="." unique_id=1644577258]
@@ -1184,7 +1184,7 @@ gravity_scale = 0.0
 position = Vector2(-41, 123)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D7" unique_id=1115207200]
-position = Vector2(0, -13.5)
+position = Vector2(661, -173)
 shape = SubResource("RectangleShape2D_2u3nc")
 
 [node name="RigidBody2D6" type="RigidBody2D" parent="." unique_id=1459400642]
@@ -1195,7 +1195,7 @@ gravity_scale = 0.0
 position = Vector2(191, 191)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D6" unique_id=1672160489]
-position = Vector2(0, -13.5)
+position = Vector2(-256, 245)
 shape = SubResource("RectangleShape2D_2u3nc")
 
 [node name="RigidBody2D5" type="RigidBody2D" parent="." unique_id=932446436]
@@ -1203,10 +1203,10 @@ position = Vector2(-101, -2)
 gravity_scale = 0.0
 
 [node name="Tree8" parent="RigidBody2D5" unique_id=205367884 instance=ExtResource("1_hiqwa")]
-position = Vector2(659, -159)
+position = Vector2(661, -160)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D5" unique_id=1652402437]
-position = Vector2(0, -13.5)
+position = Vector2(-112, 9)
 shape = SubResource("RectangleShape2D_2u3nc")
 
 [node name="RigidBody2D4" type="RigidBody2D" parent="." unique_id=1330182976]
@@ -1217,7 +1217,7 @@ gravity_scale = 0.0
 position = Vector2(-256, 258)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4" unique_id=1836151395]
-position = Vector2(0, -13.5)
+position = Vector2(0, -13)
 shape = SubResource("RectangleShape2D_2u3nc")
 
 [connection signal="pressed" from="singleincrementtext/RigidBody2D/singleincrement" to="singleincrementtext" method="_on_singleincrement_pressed"]
