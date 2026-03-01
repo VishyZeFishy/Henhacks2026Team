@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://juggo6jcfrqs" path="res://scenes/theguy.gd" id="1_dat5t"]
 [ext_resource type="Texture2D" uid="uid://doshs0sah14w5" path="res://assets/guy_sprites.png" id="2_d3bik"]
 [ext_resource type="Texture2D" uid="uid://b6qjjraa4b7am" path="res://assets/guy_chopping.png" id="2_yulri"]
-[ext_resource type="Script" uid="uid://g8nl6i3ouuxe" path="res://scripts/actions.gd" id="3_yulri"]
 [ext_resource type="Texture2D" uid="uid://6vuqwrsrv2rs" path="res://assets/guy_planting.png" id="4_mp1pd"]
 [ext_resource type="Texture2D" uid="uid://c0visqdb6l6rw" path="res://assets/guy_water.png" id="5_dat5t"]
 
@@ -171,6 +170,3 @@ sprite_frames = SubResource("SpriteFrames_mp1pd")
 animation = &"watering"
 autoplay = "idle"
 frame_progress = 0.49770612
-
-[node name="Node" type="Node" parent="." unique_id=1735325601]
-script = ExtResource("3_yulri")

@@ -1158,7 +1158,7 @@ script = ExtResource("11_70uel")
 
 [node name="double_increment_button" type="Button" parent="double_increment" unique_id=1236847741]
 layout_mode = 0
-offset_left = 27.234684
+offset_left = 27.23468
 offset_top = -71.63988
 offset_right = 355.23468
 offset_bottom = 256.3601
