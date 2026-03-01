@@ -1157,6 +1157,7 @@ shape = SubResource("RectangleShape2D_2u3nc")
 
 [node name="RigidBody2D9" type="RigidBody2D" parent="." unique_id=1430880938]
 position = Vector2(-101, -2)
+gravity_scale = 0.0
 
 [node name="Tree4" parent="RigidBody2D9" unique_id=2117573260 instance=ExtResource("1_hiqwa")]
 
@@ -1166,6 +1167,7 @@ shape = SubResource("RectangleShape2D_2u3nc")
 
 [node name="RigidBody2D8" type="RigidBody2D" parent="." unique_id=544713011]
 position = Vector2(-101, -2)
+gravity_scale = 0.0
 
 [node name="Tree5" parent="RigidBody2D8" unique_id=29863913 instance=ExtResource("1_hiqwa")]
 position = Vector2(-112, 22)
@@ -1176,6 +1178,7 @@ shape = SubResource("RectangleShape2D_2u3nc")
 
 [node name="RigidBody2D7" type="RigidBody2D" parent="." unique_id=1644577258]
 position = Vector2(-101, -2)
+gravity_scale = 0.0
 
 [node name="Tree6" parent="RigidBody2D7" unique_id=310685508 instance=ExtResource("1_hiqwa")]
 position = Vector2(-41, 123)
@@ -1186,6 +1189,7 @@ shape = SubResource("RectangleShape2D_2u3nc")
 
 [node name="RigidBody2D6" type="RigidBody2D" parent="." unique_id=1459400642]
 position = Vector2(-101, -2)
+gravity_scale = 0.0
 
 [node name="Tree7" parent="RigidBody2D6" unique_id=2054344777 instance=ExtResource("1_hiqwa")]
 position = Vector2(191, 191)
@@ -1196,6 +1200,7 @@ shape = SubResource("RectangleShape2D_2u3nc")
 
 [node name="RigidBody2D5" type="RigidBody2D" parent="." unique_id=932446436]
 position = Vector2(-101, -2)
+gravity_scale = 0.0
 
 [node name="Tree8" parent="RigidBody2D5" unique_id=205367884 instance=ExtResource("1_hiqwa")]
 position = Vector2(659, -159)
@@ -1206,6 +1211,7 @@ shape = SubResource("RectangleShape2D_2u3nc")
 
 [node name="RigidBody2D4" type="RigidBody2D" parent="." unique_id=1330182976]
 position = Vector2(-101, -2)
+gravity_scale = 0.0
 
 [node name="Tree9" parent="RigidBody2D4" unique_id=373356592 instance=ExtResource("1_hiqwa")]
 position = Vector2(-256, 258)
