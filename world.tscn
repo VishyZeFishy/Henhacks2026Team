@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://618nrotnx407" path="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://bqmpineve2r3n" path="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Tilesets/Hills.png" id="2_tlwt5"]
+[ext_resource type="Texture2D" uid="uid://cbt33ie7k8enh" path="res://assets/tree.png" id="3_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://cyp1uayj78m6w" path="res://scenes/theguy.tscn" id="3_tlwt5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
@@ -196,7 +197,10 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_aqk2v")
 sources/1 = SubResource("TileSetAtlasSource_036b0")
 
-[node name="Node2D2" type="Node2D" unique_id=1614387412]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
+size = Vector2(164.40387, 202.84166)
+
+[node name="Node2D" type="Node2D" unique_id=1614387412]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=385391193]
 tile_set = SubResource("TileSet_dwbse")
@@ -209,6 +213,21 @@ layer_1/tile_data = PackedInt32Array(458762, 196608, 4, 524296, 196608, 4, 45875
 layer_2/name = "Layer2"
 layer_2/z_index = -5
 layer_2/tile_data = PackedInt32Array(327689, 1, 2, 327690, 589825, 5, 327691, 655361, 5, 327692, 65537, 2, 327693, 131073, 2, 196617, 1, 1, 262153, 1, 1, 196618, 65537, 1, 262154, 589825, 4, 196619, 65537, 1, 262155, 655361, 4, 196620, 262145, 6, 262156, 65537, 1, 196621, 131073, 1, 262157, 131073, 1, 131081, 1, 0, 131082, 65537, 0, 131083, 65537, 0, 131084, 65537, 0, 131085, 131073, 0, 393226, 589825, 6, 393227, 655361, 6)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="TileMap" unique_id=555767609]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="TileMap/RigidBody2D" unique_id=1374928928]
+z_index = 5
+position = Vector2(55, 151)
+scale = Vector2(0.12773433, 0.14296874)
+texture = ExtResource("3_aqk2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D" unique_id=815749981]
+z_index = 5
+position = Vector2(54.5, 161.5)
+scale = Vector2(0.1277342, 0.14296871)
+shape = SubResource("RectangleShape2D_aqk2v")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=381719193]
 position = Vector2(193, 96)
