@@ -160,7 +160,6 @@ animations = [{
 
 [node name="Theguy" type="CharacterBody2D" unique_id=1929062567]
 script = ExtResource("1_dat5t")
-current_tool = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=604915232]
 position = Vector2(-1, 4)
@@ -171,7 +170,7 @@ debug_color = Color(1.540184e-06, 0.56732833, 0.85925174, 0.41960785)
 sprite_frames = SubResource("SpriteFrames_mp1pd")
 animation = &"watering"
 autoplay = "idle"
-frame_progress = 0.27349108
+frame_progress = 0.49770612
 
 [node name="Node" type="Node" parent="." unique_id=1735325601]
 script = ExtResource("3_yulri")

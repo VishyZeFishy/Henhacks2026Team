@@ -10,6 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://dtcf4ytccj3jv" path="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden_House_Roof_Tilset.png" id="6_k3n1d"]
 [ext_resource type="Texture2D" uid="uid://bl1eg8ts0125l" path="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden_House_Walls_Tilset.png" id="7_2o6r5"]
 [ext_resource type="Texture2D" uid="uid://ccy7j7x4ogkrt" path="res://assets/Tilesets/RMVX/tf_jungle_b.png" id="8_wse8f"]
+[ext_resource type="Texture2D" uid="uid://8kxhayoqd6av" path="res://assets/myster.png" id="10_ic0uy"]
+[ext_resource type="Script" uid="uid://bnwl8p2wb3moo" path="res://double_increment.gd" id="11_70uel"]
+[ext_resource type="Script" uid="uid://cjro4te86nmts" path="res://label.gd" id="11_k3n1d"]
+[ext_resource type="Texture2D" uid="uid://81f21i48gt0o" path="res://assets/coolbutton.png" id="13_2o6r5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
 texture = ExtResource("1_fj7yv")
@@ -1140,3 +1144,45 @@ zoom = Vector2(3.57, 3.57)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=404994474]
 color = Color(1.0731114, 1.0731114, 0.9361636, 1)
+
+[node name="double_increment" type="Label" parent="." unique_id=1711786501]
+offset_left = 196.0
+offset_top = 168.0
+offset_right = 336.0
+offset_bottom = 191.0
+scale = Vector2(0.4773327, 0.54438955)
+text = "Double Increment
+COST: 50 clicks"
+uppercase = true
+script = ExtResource("11_70uel")
+
+[node name="double_increment_button" type="Button" parent="double_increment" unique_id=1236847741]
+layout_mode = 0
+offset_left = 27.234684
+offset_top = -71.63988
+offset_right = 355.23468
+offset_bottom = 256.3601
+scale = Vector2(0.2669581, 0.2669581)
+icon = ExtResource("13_2o6r5")
+flat = true
+
+[node name="Clicking_numbers" type="Label" parent="." unique_id=1987098584]
+offset_left = 212.0
+offset_top = 71.0
+offset_right = 252.0
+offset_bottom = 120.0
+text = "0
+"
+script = ExtResource("11_k3n1d")
+
+[node name="ClickingButton" type="Button" parent="Clicking_numbers" unique_id=340854743]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 24.0
+offset_right = 322.0
+offset_bottom = 352.0
+scale = Vector2(0.03999877, 0.03999877)
+icon = ExtResource("10_ic0uy")
+
+[connection signal="pressed" from="double_increment/double_increment_button" to="double_increment" method="_on_double_increment_button_pressed"]
+[connection signal="pressed" from="Clicking_numbers/ClickingButton" to="Clicking_numbers" method="_on_button_pressed"]
