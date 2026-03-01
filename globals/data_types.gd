@@ -1,10 +1,14 @@
+extends Node
+
 class_name DataTypes 
 
-var current_action = "idle"
+var wood = 0
 
-enum Action {
+enum action {
 	Idle,
 	Chop,
 	Plant,
 	Water
 }
+
+var tree_in_focus

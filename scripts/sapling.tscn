@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://v8x1j0pvat21"]
+
+[ext_resource type="Script" uid="uid://dy6gct0hvwyiy" path="res://scripts/sapling.gd" id="1_11he4"]
+
+[node name="Sapling" type="Area2D" unique_id=1991148474]
+script = ExtResource("1_11he4")
