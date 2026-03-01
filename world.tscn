@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://618nrotnx407" path="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://bqmpineve2r3n" path="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Tilesets/Hills.png" id="2_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://cyp1uayj78m6w" path="res://scenes/theguy.tscn" id="3_tlwt5"]
-[ext_resource type="Texture2D" uid="uid://b3b2oo1w47r8c" path="res://assets/simple-leaf.png" id="4_aqk2v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
 texture = ExtResource("1_fj7yv")
@@ -192,16 +191,3 @@ zoom = Vector2(3.57, 3.57)
 [node name="Theguy" parent="." unique_id=1929062567 instance=ExtResource("3_tlwt5")]
 position = Vector2(138, 111)
 scale = Vector2(0.125, 0.125)
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=507170553]
-position = Vector2(96, -15)
-texture = ExtResource("4_aqk2v")
-lifetime = 1.82
-speed_scale = 0.15
-randomness = 0.24
-direction = Vector2(1.69, 3.94)
-spread = 69.06
-initial_velocity_min = 306.93
-initial_velocity_max = 435.64
-scale_amount_min = 0.07
-scale_amount_max = 0.07
