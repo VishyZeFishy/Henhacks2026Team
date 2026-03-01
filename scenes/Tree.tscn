@@ -44,5 +44,6 @@ position = Vector2(0, -7.0000005)
 scale = Vector2(0.40151516, 0.46428576)
 texture = SubResource("AtlasTexture_qvbew")
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="hidden" from="CollisionShape2D" to="." method="_on_collision_shape_2d_hidden"]
