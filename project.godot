@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://qnfsu4tncu3n"
+Globalcounter="*uid://csc6m22oa7yuq"
 
 [global_group]
 

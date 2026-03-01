@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dl4hukeqamiyp" path="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="5_ic0uy"]
 [ext_resource type="Texture2D" uid="uid://dtcf4ytccj3jv" path="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden_House_Roof_Tilset.png" id="6_k3n1d"]
 [ext_resource type="Texture2D" uid="uid://bl1eg8ts0125l" path="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden_House_Walls_Tilset.png" id="7_2o6r5"]
+[ext_resource type="Texture2D" uid="uid://8kxhayoqd6av" path="res://assets/myster.png" id="10_ic0uy"]
+[ext_resource type="Script" uid="uid://cjro4te86nmts" path="res://label.gd" id="11_k3n1d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
 texture = ExtResource("1_fj7yv")
@@ -636,3 +638,22 @@ zoom = Vector2(3.57, 3.57)
 [node name="Theguy" parent="." unique_id=1929062567 instance=ExtResource("3_tlwt5")]
 position = Vector2(175, 56)
 scale = Vector2(0.125, 0.125)
+
+[node name="Button" type="Button" parent="." unique_id=1143700729]
+offset_left = 153.0
+offset_top = 51.0
+offset_right = 481.0
+offset_bottom = 379.0
+scale = Vector2(0.040001236, 0.040001236)
+icon = ExtResource("10_ic0uy")
+
+[node name="Label" type="Label" parent="." unique_id=1769205991]
+offset_left = 150.0
+offset_top = 31.0
+offset_right = 190.0
+offset_bottom = 80.0
+text = "0
+"
+script = ExtResource("11_k3n1d")
+
+[connection signal="pressed" from="Button" to="Label" method="_on_button_pressed"]
