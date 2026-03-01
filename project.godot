@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Henhacks2026"
-run/main_scene="uid://dpdcidqm4uvsb"
+run/main_scene="uid://djelt2jrjcrub"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

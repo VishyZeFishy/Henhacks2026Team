@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dpdcidqm4uvsb"]
 
 [ext_resource type="Texture2D" uid="uid://cbvtd7mrie0bf" path="res://assets/world_tileset.png" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://h2siy66kck0" path="res://scenes/Tree.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" path="res://scenes/Tree.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cyp1uayj78m6w" path="res://scenes/theguy.tscn" id="2_yqjtg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqjtg"]
@@ -180,7 +180,7 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 65536, 
 [node name="Tree" parent="." unique_id=2104442178 instance=ExtResource("2_lnu2h")]
 
 [node name="Theguy" parent="." unique_id=798270208 instance=ExtResource("2_yqjtg")]
-position = Vector2(37, -51.000004)
+position = Vector2(36, -51)
 scale = Vector2(0.15, 0.15)
 
 [node name="Camera2D" type="Camera2D" parent="Theguy" unique_id=663913735]

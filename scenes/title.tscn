@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://djelt2jrjcrub"]
 
+[ext_resource type="Script" uid="uid://x1n87u88b4i7" path="res://scenes/title.gd" id="1_4ignj"]
+[ext_resource type="Texture2D" uid="uid://gt48nbvqckd8" path="res://assets/mainmenu.jpg" id="2_wosw1"]
+
 [node name="Node2D" type="Node2D" unique_id=957776577]
+script = ExtResource("1_4ignj")
+
+[node name="SceneButton" type="Button" parent="." unique_id=1570954943]
+offset_left = -438.0
+offset_top = -161.0
+offset_right = -65.0
+offset_bottom = 30.0
+text = "CLICK FOR THE BEST GAME EVER"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1389116831]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=798224791]
+position = Vector2(83.99997, -20)
+scale = Vector2(0.46171874, 0.33055556)
+texture = ExtResource("2_wosw1")
