@@ -26,20 +26,71 @@ func _physics_process(delta: float) -> void:
 	if y_direction:
 		velocity.y = y_direction * SPEED
 	else:
-		velocity.x = move_toward(velocity.y, 0, SPEED)
+		velocity.y = move_toward(velocity.x, 0, SPEED)
 
 	if velocity.y < 0:
-		animate.play("up")
+		$AnimatedSprite2D2.play("up")
 	elif velocity.y > 0:
-		animate.play("down")
+		$AnimatedSprite2D2.play("down")
 	
 	if velocity.x < 0:
-		animate.play("left")
+		$AnimatedSprite2D2.play("left")
 	elif velocity.x > 0:
-		animate.play("right")
+		$AnimatedSprite2D2.play("right")
 	#if (not velocity.x or not velocity.y):
 	#	$AnimatedSprite2D2.play("idle")
+	
+	
+	if Input.is_action_just_pressed("chop"):
+		$AnimatedSprite2D2.play("chopping")
+		
+	if Input.is_action_just_pressed("water"):
+		$AnimatedSprite2D2.play("watering")
+		
+	if Input.is_action_just_pressed("plant"):
+		$AnimatedSprite2D2.play("planting")
+
 	move_and_slide()
 
+
+func get_nearest_tree()->Node2D:
+	var nearest = null
+	var nearest_distance = INF
+		
+	var trees = get_tree().get_nodes_in_group("Trees")
+		
+	for tree in trees:
+		var dist = global_position.distance_to(tree.global_position)
+		
+		if dist < nearest_distance:
+			nearest_distance = dist
+			nearest = tree
+	Global.nearest_tree = nearest
+	return nearest
+
+func _input(event):
+	if Input.is_action_just_pressed("interact"):
+		
+		var nearest_tree = get_nearest_tree()
+		
+		if nearest_tree == null:
+			return
+		
+		match nearest_tree.stage:
+			
+			nearest_tree.GrowthStage.SOIL:
+				animate.play("watering")
+				await animate.animation_finished
+				nearest_tree.grow1()
+			
+			nearest_tree.GrowthStage.SAPLING:
+				animate.play("planting")
+				await animate.animation_finished
+				nearest_tree.grow1()
+			
+			nearest_tree.GrowthStage.TREE:
+				animate.play("chopping")
+				await animate.animation_finished
+				nearest_tree.grow1()
 
 	
