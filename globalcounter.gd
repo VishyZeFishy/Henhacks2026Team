@@ -13,3 +13,6 @@ func countdecrease(decrease) -> void:
 	
 func change_increment(change) -> void:
 	increment = change
+
+func increaseincrement() -> void:
+	increment = increment + 1

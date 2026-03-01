@@ -12,8 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://ccy7j7x4ogkrt" path="res://assets/Tilesets/RMVX/tf_jungle_b.png" id="8_wse8f"]
 [ext_resource type="Texture2D" uid="uid://8kxhayoqd6av" path="res://assets/myster.png" id="10_ic0uy"]
 [ext_resource type="Script" uid="uid://bnwl8p2wb3moo" path="res://double_increment.gd" id="11_70uel"]
+[ext_resource type="Script" uid="uid://bg7gi36ccm2c5" path="res://singleincrementtext.gd" id="11_hiqwa"]
 [ext_resource type="Script" uid="uid://cjro4te86nmts" path="res://label.gd" id="11_k3n1d"]
 [ext_resource type="Texture2D" uid="uid://81f21i48gt0o" path="res://assets/coolbutton.png" id="13_2o6r5"]
+[ext_resource type="Script" uid="uid://w2byjab8fkur" path="res://quitgame.gd" id="14_2u3nc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
 texture = ExtResource("1_fj7yv")
@@ -1168,17 +1170,45 @@ position = Vector2(0, 16)
 scale = Vector2(8, 8)
 zoom = Vector2(3.57, 3.57)
 
+[node name="singleincrementtext" type="Label" parent="." unique_id=703353407]
+offset_left = 199.99998
+offset_top = 222.0
+offset_right = 361.0
+offset_bottom = 271.0
+scale = Vector2(0.4773327, 0.54438955)
+text = "Single Increment
+COST: 50 clicks"
+uppercase = true
+script = ExtResource("11_hiqwa")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="singleincrementtext" unique_id=1773317789]
+gravity_scale = 0.0
+
+[node name="singleincrement" type="Button" parent="singleincrementtext/RigidBody2D" unique_id=1795095671]
+offset_left = 27.23468
+offset_top = -71.63988
+offset_right = 355.23468
+offset_bottom = 256.3601
+scale = Vector2(0.2669581, 0.2669581)
+icon = ExtResource("13_2o6r5")
+flat = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="singleincrementtext/RigidBody2D" unique_id=37189385]
+position = Vector2(27.23468, -71.63977)
+scale = Vector2(0.2669581, 0.2669581)
+shape = SubResource("ConvexPolygonShape2D_70uel")
+
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=404994474]
 color = Color(1.0731114, 1.0731114, 0.9361636, 1)
 
 [node name="double_increment" type="Label" parent="." unique_id=1711786501]
-offset_left = 196.0
-offset_top = 168.0
-offset_right = 357.0
-offset_bottom = 217.0
+offset_left = 306.0
+offset_top = 219.0
+offset_right = 467.0
+offset_bottom = 268.0
 scale = Vector2(0.4773327, 0.54438955)
 text = "Double Increment
-COST: 50 clicks"
+COST: 1000 clicks"
 uppercase = true
 script = ExtResource("11_70uel")
 
@@ -1198,6 +1228,32 @@ flat = true
 position = Vector2(27.23468, -71.63988)
 scale = Vector2(0.2669581, 0.2669581)
 shape = SubResource("ConvexPolygonShape2D_70uel")
+
+[node name="quitgame" type="Label" parent="." unique_id=1324802026]
+offset_left = 309.0
+offset_top = 144.0
+offset_right = 431.0
+offset_bottom = 193.0
+text = "QUIT GAME
+COST: 1,000,000"
+script = ExtResource("14_2u3nc")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="quitgame" unique_id=32134320]
+gravity_scale = 0.0
+
+[node name="quitbutton" type="Button" parent="quitgame/RigidBody2D" unique_id=1436178232]
+offset_left = -12.0
+offset_top = -104.0
+offset_right = 316.0
+offset_bottom = 224.0
+scale = Vector2(0.39999878, 0.39999878)
+icon = ExtResource("13_2o6r5")
+flat = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quitgame/RigidBody2D" unique_id=1144999719]
+position = Vector2(0.50001526, 30.500008)
+scale = Vector2(0.03999877, 0.03999877)
+shape = SubResource("RectangleShape2D_70uel")
 
 [node name="Clicking_numbers" type="Label" parent="." unique_id=1987098584]
 offset_left = 212.0
@@ -1224,5 +1280,7 @@ position = Vector2(0.50001526, 30.500008)
 scale = Vector2(0.03999877, 0.03999877)
 shape = SubResource("RectangleShape2D_70uel")
 
+[connection signal="pressed" from="singleincrementtext/RigidBody2D/singleincrement" to="singleincrementtext" method="_on_singleincrement_pressed"]
 [connection signal="pressed" from="double_increment/RigidBody2D/double_increment_button" to="double_increment" method="_on_double_increment_button_pressed"]
+[connection signal="pressed" from="quitgame/RigidBody2D/quitbutton" to="quitgame" method="_on_quitbutton_pressed"]
 [connection signal="pressed" from="Clicking_numbers/RigidBody2D/ClickingButton" to="Clicking_numbers" method="_on_button_pressed"]
