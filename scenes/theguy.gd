@@ -39,5 +39,8 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D2.play("right")
 	#if (not velocity.x or not velocity.y):
 	#	$AnimatedSprite2D2.play("idle")
-	
 	move_and_slide()
+	
+
+func _on_hidden() -> void:
+	pass

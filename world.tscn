@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bu18jo8j7gidv"]
 
 [ext_resource type="Texture2D" uid="uid://618nrotnx407" path="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://h2siy66kck0" path="res://scenes/Tree.tscn" id="1_hiqwa"]
 [ext_resource type="Texture2D" uid="uid://bqmpineve2r3n" path="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Tilesets/Hills.png" id="2_tlwt5"]
-[ext_resource type="Texture2D" uid="uid://cbt33ie7k8enh" path="res://assets/tree.png" id="3_aqk2v"]
 [ext_resource type="Texture2D" uid="uid://datavb2qeqvly" path="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Tilesets/Doors.png" id="3_ioo17"]
 [ext_resource type="PackedScene" uid="uid://cyp1uayj78m6w" path="res://scenes/theguy.tscn" id="3_tlwt5"]
 [ext_resource type="Texture2D" uid="uid://c1bc1w7emw4sq" path="res://assets/Sprout Lands/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png" id="4_wse8f"]
@@ -12,10 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://ccy7j7x4ogkrt" path="res://assets/Tilesets/RMVX/tf_jungle_b.png" id="8_wse8f"]
 [ext_resource type="Texture2D" uid="uid://8kxhayoqd6av" path="res://assets/myster.png" id="10_ic0uy"]
 [ext_resource type="Script" uid="uid://bnwl8p2wb3moo" path="res://double_increment.gd" id="11_70uel"]
-[ext_resource type="Script" uid="uid://bg7gi36ccm2c5" path="res://singleincrementtext.gd" id="11_hiqwa"]
+[ext_resource type="Script" path="res://singleincrementtext.gd" id="11_hiqwa"]
 [ext_resource type="Script" uid="uid://cjro4te86nmts" path="res://label.gd" id="11_k3n1d"]
 [ext_resource type="Texture2D" uid="uid://81f21i48gt0o" path="res://assets/coolbutton.png" id="13_2o6r5"]
-[ext_resource type="Script" uid="uid://w2byjab8fkur" path="res://quitgame.gd" id="14_2u3nc"]
+[ext_resource type="Script" path="res://quitgame.gd" id="14_2u3nc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
 texture = ExtResource("1_fj7yv")
@@ -978,9 +978,6 @@ sources/6 = SubResource("TileSetAtlasSource_udxuc")
 sources/7 = SubResource("TileSetAtlasSource_ikiii")
 sources/8 = SubResource("TileSetAtlasSource_ic0uy")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
-size = Vector2(164.40387, 202.84166)
-
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_70uel"]
 points = PackedVector2Array(133.40881, 158.26141, 47.08545, 247.71344, 282.51282, 247.71344, 196.18945, 158.26141)
 
@@ -1004,23 +1001,6 @@ layer_2/z_index = -5
 position = Vector2(266, -135)
 gravity_scale = 0.0
 
-[node name="RigidBody2D" type="RigidBody2D" parent="TileMap" unique_id=555767609]
-gravity_scale = 0.0
-
-[node name="Sprite2D" type="Sprite2D" parent="TileMap/RigidBody2D" unique_id=1374928928]
-z_index = 5
-position = Vector2(87, 151)
-scale = Vector2(0.12773433, 0.14296874)
-texture = ExtResource("3_aqk2v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D" unique_id=815749981]
-z_index = 5
-position = Vector2(86.49999, 161.49998)
-scale = Vector2(0.1277342, 0.14296871)
-shape = SubResource("RectangleShape2D_aqk2v")
-
-[node name="Node" type="Node" parent="TileMap/RigidBody2D" unique_id=926101512]
-
 [node name="RigidBody2D2" type="RigidBody2D" parent="TileMap" unique_id=713439432]
 position = Vector2(218, -48)
 gravity_scale = 0.0
@@ -1029,137 +1009,24 @@ gravity_scale = 0.0
 position = Vector2(436, -96)
 gravity_scale = 0.0
 
-[node name="RigidBody2D4" type="RigidBody2D" parent="TileMap" unique_id=993458644]
-position = Vector2(149, -104)
-gravity_scale = 0.0
-
-[node name="Sprite2D" type="Sprite2D" parent="TileMap/RigidBody2D4" unique_id=289665059]
-z_index = 5
-position = Vector2(55, 151)
-scale = Vector2(0.12773433, 0.14296874)
-texture = ExtResource("3_aqk2v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D4" unique_id=524267530]
-z_index = 5
-position = Vector2(54.5, 161.5)
-scale = Vector2(0.1277342, 0.14296871)
-shape = SubResource("RectangleShape2D_aqk2v")
-
 [node name="RigidBody2D6" type="RigidBody2D" parent="TileMap" unique_id=818529556]
 position = Vector2(284, 26)
 gravity_scale = 0.0
-
-[node name="RigidBody2D3" type="RigidBody2D" parent="TileMap/RigidBody2D6" unique_id=470798290]
-position = Vector2(-171, -48)
-gravity_scale = 0.0
-
-[node name="Sprite2D" type="Sprite2D" parent="TileMap/RigidBody2D6/RigidBody2D3" unique_id=5331149]
-z_index = 5
-position = Vector2(-328.5166, 39.1297)
-scale = Vector2(0.128021, 0.14456058)
-texture = ExtResource("3_aqk2v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D6/RigidBody2D3" unique_id=162838813]
-z_index = 5
-position = Vector2(-329.0166, 49.6297)
-scale = Vector2(0.12792684, 0.14456055)
-shape = SubResource("RectangleShape2D_aqk2v")
-
-[node name="RigidBody2D4" type="RigidBody2D" parent="TileMap/RigidBody2D6" unique_id=1031898094]
-position = Vector2(-458, -56)
-gravity_scale = 0.0
-
-[node name="Sprite2D" type="Sprite2D" parent="TileMap/RigidBody2D6/RigidBody2D4" unique_id=1039480588]
-z_index = 5
-position = Vector2(39, 135)
-scale = Vector2(0.12773433, 0.14296874)
-texture = ExtResource("3_aqk2v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D6/RigidBody2D4" unique_id=1908838076]
-z_index = 5
-position = Vector2(38.5, 145.5)
-scale = Vector2(0.1277342, 0.14296871)
-shape = SubResource("RectangleShape2D_aqk2v")
 
 [node name="RigidBody2D6" type="RigidBody2D" parent="TileMap/RigidBody2D6" unique_id=1612077897]
 position = Vector2(-323, 74)
 gravity_scale = 0.0
 
-[node name="RigidBody2D7" type="RigidBody2D" parent="TileMap" unique_id=1161472874]
-position = Vector2(-11, 56)
-gravity_scale = 0.0
-
-[node name="Sprite2D" type="Sprite2D" parent="TileMap/RigidBody2D7" unique_id=558683158]
-z_index = 5
-position = Vector2(-71.51663, -78.87031)
-scale = Vector2(0.128021, 0.14456058)
-texture = ExtResource("3_aqk2v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D7" unique_id=1854391752]
-z_index = 5
-position = Vector2(-72.01666, -68.37031)
-scale = Vector2(0.12792684, 0.14456055)
-shape = SubResource("RectangleShape2D_aqk2v")
-
-[node name="RigidBody2D8" type="RigidBody2D" parent="TileMap/RigidBody2D7" unique_id=375115474]
-position = Vector2(735, -169)
-gravity_scale = 0.0
-
-[node name="RigidBody2D8" type="RigidBody2D" parent="TileMap" unique_id=834819460]
-position = Vector2(362, -55)
-gravity_scale = 0.0
-
-[node name="Sprite2D" type="Sprite2D" parent="TileMap/RigidBody2D8" unique_id=1846638296]
-z_index = 5
-position = Vector2(55, 151)
-scale = Vector2(0.12773433, 0.14296874)
-texture = ExtResource("3_aqk2v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D8" unique_id=585439683]
-z_index = 5
-position = Vector2(54.5, 161.5)
-scale = Vector2(0.1277342, 0.14296871)
-shape = SubResource("RectangleShape2D_aqk2v")
-
 [node name="RigidBody2D9" type="RigidBody2D" parent="TileMap" unique_id=1157509304]
 position = Vector2(379, 86)
 gravity_scale = 0.0
-
-[node name="RigidBody2D10" type="RigidBody2D" parent="TileMap" unique_id=1117042300]
-position = Vector2(379, 86)
-gravity_scale = 0.0
-
-[node name="Sprite2D" type="Sprite2D" parent="TileMap/RigidBody2D10" unique_id=701112728]
-z_index = 5
-position = Vector2(-24.999996, -156)
-scale = Vector2(0.12773433, 0.14296874)
-texture = ExtResource("3_aqk2v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D10" unique_id=1600196099]
-z_index = 5
-position = Vector2(-25, -151)
-scale = Vector2(0.1277342, 0.14296871)
-shape = SubResource("RectangleShape2D_aqk2v")
 
 [node name="RigidBody2D11" type="RigidBody2D" parent="TileMap" unique_id=1268211146]
 position = Vector2(120, -208)
 gravity_scale = 0.0
 
-[node name="RigidBody2D12" type="RigidBody2D" parent="TileMap" unique_id=565646463]
-position = Vector2(-6, -208)
-gravity_scale = 0.0
-
-[node name="Sprite2D" type="Sprite2D" parent="TileMap/RigidBody2D12" unique_id=1671686389]
-z_index = 5
-position = Vector2(55, 151)
-scale = Vector2(0.12773433, 0.14296874)
-texture = ExtResource("3_aqk2v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D12" unique_id=1540083909]
-z_index = 5
-position = Vector2(54.5, 161.5)
-scale = Vector2(0.1277342, 0.14296871)
-shape = SubResource("RectangleShape2D_aqk2v")
+[node name="Tree" parent="TileMap" unique_id=2104442178 instance=ExtResource("1_hiqwa")]
+position = Vector2(80, -48)
 
 [node name="Theguy" parent="." unique_id=1929062567 instance=ExtResource("3_tlwt5")]
 position = Vector2(166, 105)
@@ -1279,6 +1146,33 @@ icon = ExtResource("10_ic0uy")
 position = Vector2(0.50001526, 30.500008)
 scale = Vector2(0.03999877, 0.03999877)
 shape = SubResource("RectangleShape2D_70uel")
+
+[node name="Tree" parent="." unique_id=341265348 instance=ExtResource("1_hiqwa")]
+position = Vector2(206, 60)
+
+[node name="Tree2" parent="." unique_id=1770712222 instance=ExtResource("1_hiqwa")]
+position = Vector2(423, 102)
+
+[node name="Tree3" parent="." unique_id=895488669 instance=ExtResource("1_hiqwa")]
+position = Vector2(344, -28)
+
+[node name="Tree4" parent="." unique_id=2117573260 instance=ExtResource("1_hiqwa")]
+position = Vector2(-101, -2)
+
+[node name="Tree5" parent="." unique_id=29863913 instance=ExtResource("1_hiqwa")]
+position = Vector2(-213, 20)
+
+[node name="Tree6" parent="." unique_id=310685508 instance=ExtResource("1_hiqwa")]
+position = Vector2(-142, 121)
+
+[node name="Tree7" parent="." unique_id=2054344777 instance=ExtResource("1_hiqwa")]
+position = Vector2(90, 189)
+
+[node name="Tree8" parent="." unique_id=205367884 instance=ExtResource("1_hiqwa")]
+position = Vector2(558, -161)
+
+[node name="Tree9" parent="." unique_id=373356592 instance=ExtResource("1_hiqwa")]
+position = Vector2(-357, 256)
 
 [connection signal="pressed" from="singleincrementtext/RigidBody2D/singleincrement" to="singleincrementtext" method="_on_singleincrement_pressed"]
 [connection signal="pressed" from="double_increment/RigidBody2D/double_increment_button" to="double_increment" method="_on_double_increment_button_pressed"]
