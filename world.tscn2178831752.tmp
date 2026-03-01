@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ccy7j7x4ogkrt" path="res://assets/Tilesets/RMVX/tf_jungle_b.png" id="8_wse8f"]
 [ext_resource type="Texture2D" uid="uid://8kxhayoqd6av" path="res://assets/myster.png" id="10_ic0uy"]
 [ext_resource type="Script" uid="uid://bnwl8p2wb3moo" path="res://double_increment.gd" id="11_70uel"]
-[ext_resource type="Script" uid="uid://bg7gi36ccm2c5" path="res://singleincrementtext.gd" id="11_hiqwa"]
+[ext_resource type="Script" path="res://singleincrementtext.gd" id="11_hiqwa"]
 [ext_resource type="Script" uid="uid://cjro4te86nmts" path="res://label.gd" id="11_k3n1d"]
 [ext_resource type="Texture2D" uid="uid://81f21i48gt0o" path="res://assets/coolbutton.png" id="13_2o6r5"]
 [ext_resource type="Script" path="res://quitgame.gd" id="14_2u3nc"]
@@ -1174,7 +1174,6 @@ position = Vector2(558, -161)
 [node name="Tree9" parent="." unique_id=373356592 instance=ExtResource("1_hiqwa")]
 position = Vector2(-357, 256)
 
-[connection signal="visibility_changed" from="TileMap/RigidBody2D5" to="TileMap/Tree" method="_on_rigid_body_2d_5_visibility_changed"]
 [connection signal="pressed" from="singleincrementtext/RigidBody2D/singleincrement" to="singleincrementtext" method="_on_singleincrement_pressed"]
 [connection signal="pressed" from="double_increment/RigidBody2D/double_increment_button" to="double_increment" method="_on_double_increment_button_pressed"]
 [connection signal="pressed" from="quitgame/RigidBody2D/quitbutton" to="quitgame" method="_on_quitbutton_pressed"]

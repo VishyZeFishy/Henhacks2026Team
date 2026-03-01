@@ -1174,7 +1174,6 @@ position = Vector2(558, -161)
 [node name="Tree9" parent="." unique_id=373356592 instance=ExtResource("1_hiqwa")]
 position = Vector2(-357, 256)
 
-[connection signal="visibility_changed" from="TileMap/RigidBody2D5" to="TileMap/Tree" method="_on_rigid_body_2d_5_visibility_changed"]
 [connection signal="pressed" from="singleincrementtext/RigidBody2D/singleincrement" to="singleincrementtext" method="_on_singleincrement_pressed"]
 [connection signal="pressed" from="double_increment/RigidBody2D/double_increment_button" to="double_increment" method="_on_double_increment_button_pressed"]
 [connection signal="pressed" from="quitgame/RigidBody2D/quitbutton" to="quitgame" method="_on_quitbutton_pressed"]

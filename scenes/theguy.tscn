@@ -157,8 +157,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Theguy" type="CharacterBody2D" unique_id=1929062567]
+[node name="Theguy" type="CharacterBody2D" unique_id=1929062567 node_paths=PackedStringArray("timer")]
 script = ExtResource("1_dat5t")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="." unique_id=694033184]
+wait_time = 0.1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=604915232]
 position = Vector2(-1, 4)
@@ -172,3 +176,5 @@ autoplay = "idle"
 frame_progress = 0.49770612
 
 [connection signal="hidden" from="." to="." method="_on_hidden"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

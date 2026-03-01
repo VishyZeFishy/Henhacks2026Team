@@ -9,12 +9,30 @@ extends Area2D
 var stage = 2
 
 func _ready():
-	print("Ima  atree")
+	tree.show()
+	soil.hide()
+	sapling.hide()
 
 func _process(delta):
-	pass
+	if stage == 1:
+		tree.hide()
+		soil.hide()
+		sapling.show()
+	elif stage == 2:
+		tree.show()
+		soil.hide()
+		sapling.hide()
+	else:
+		tree.hide()
+		soil.show()
+		sapling.hide()
+		stage = 0
+		Global.wood += 1
 
 func _on_body_entered(body: Node2D) -> void:
-	print ("INTERACTED")
-	#body.get_node("Character2D").queue_free()
+	if body.has_method("interaction"):
+		Global.stage = stage
+		stage += 1
+		body.interaction()
+	
 	

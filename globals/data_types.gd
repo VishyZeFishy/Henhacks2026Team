@@ -2,7 +2,7 @@ extends Node
 
 class_name DataTypes 
 
-var stage = 3
+var stage = 2
 
 enum action {
 	Idle,
