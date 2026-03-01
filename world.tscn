@@ -959,6 +959,12 @@ sources/8 = SubResource("TileSetAtlasSource_ic0uy")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
 size = Vector2(164.40387, 202.84166)
 
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_70uel"]
+points = PackedVector2Array(133.40881, 158.26141, 47.08545, 247.71344, 282.51282, 247.71344, 196.18945, 158.26141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70uel"]
+size = Vector2(325.00964, 325.0099)
+
 [node name="Node2D" type="Node2D" unique_id=1614387412]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=385391193]
@@ -1148,16 +1154,17 @@ color = Color(1.0731114, 1.0731114, 0.9361636, 1)
 [node name="double_increment" type="Label" parent="." unique_id=1711786501]
 offset_left = 196.0
 offset_top = 168.0
-offset_right = 336.0
-offset_bottom = 191.0
+offset_right = 357.0
+offset_bottom = 217.0
 scale = Vector2(0.4773327, 0.54438955)
 text = "Double Increment
 COST: 50 clicks"
 uppercase = true
 script = ExtResource("11_70uel")
 
-[node name="double_increment_button" type="Button" parent="double_increment" unique_id=1236847741]
-layout_mode = 0
+[node name="RigidBody2D" type="RigidBody2D" parent="double_increment" unique_id=221552756]
+
+[node name="double_increment_button" type="Button" parent="double_increment/RigidBody2D" unique_id=1236847741]
 offset_left = 27.23468
 offset_top = -71.63988
 offset_right = 355.23468
@@ -1165,6 +1172,9 @@ offset_bottom = 256.3601
 scale = Vector2(0.2669581, 0.2669581)
 icon = ExtResource("13_2o6r5")
 flat = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="double_increment/RigidBody2D/double_increment_button" unique_id=1216691874]
+shape = SubResource("ConvexPolygonShape2D_70uel")
 
 [node name="Clicking_numbers" type="Label" parent="." unique_id=1987098584]
 offset_left = 212.0
@@ -1175,8 +1185,9 @@ text = "0
 "
 script = ExtResource("11_k3n1d")
 
-[node name="ClickingButton" type="Button" parent="Clicking_numbers" unique_id=340854743]
-layout_mode = 0
+[node name="RigidBody2D" type="RigidBody2D" parent="Clicking_numbers" unique_id=1677946090]
+
+[node name="ClickingButton" type="Button" parent="Clicking_numbers/RigidBody2D" unique_id=340854743]
 offset_left = -6.0
 offset_top = 24.0
 offset_right = 322.0
@@ -1184,5 +1195,9 @@ offset_bottom = 352.0
 scale = Vector2(0.03999877, 0.03999877)
 icon = ExtResource("10_ic0uy")
 
-[connection signal="pressed" from="double_increment/double_increment_button" to="double_increment" method="_on_double_increment_button_pressed"]
-[connection signal="pressed" from="Clicking_numbers/ClickingButton" to="Clicking_numbers" method="_on_button_pressed"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clicking_numbers/RigidBody2D/ClickingButton" unique_id=31651675]
+position = Vector2(162.50537, 162.50513)
+shape = SubResource("RectangleShape2D_70uel")
+
+[connection signal="pressed" from="double_increment/RigidBody2D/double_increment_button" to="double_increment" method="_on_double_increment_button_pressed"]
+[connection signal="pressed" from="Clicking_numbers/RigidBody2D/ClickingButton" to="Clicking_numbers" method="_on_button_pressed"]
