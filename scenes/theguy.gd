@@ -1,10 +1,14 @@
 extends CharacterBody2D
 
-@export var current_tool: DataTypes.Action = DataTypes.Action.Idle
+@export var current_tool: DataTypes.action
 @export var animate: AnimatedSprite2D
+
+func _on_ready():
+	animate.play("idle")
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -400.0
+
 
 func _physics_process(delta: float) -> void:
 
@@ -47,3 +51,46 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D2.play("planting")
 
 	move_and_slide()
+
+
+func get_nearest_tree()->Node2D:
+	var nearest = null
+	var nearest_distance = INF
+		
+	var trees = get_tree().get_nodes_in_group("Trees")
+		
+	for tree in trees:
+		var dist = global_position.distance_to(tree.global_position)
+		
+		if dist < nearest_distance:
+			nearest_distance = dist
+			nearest = tree
+	Global.nearest_tree = nearest
+	return nearest
+
+func _input(event):
+	if Input.is_action_just_pressed("interact"):
+		
+		var nearest_tree = get_nearest_tree()
+		
+		if nearest_tree == null:
+			return
+		
+		match nearest_tree.stage:
+			
+			nearest_tree.GrowthStage.SOIL:
+				animate.play("watering")
+				await animate.animation_finished
+				nearest_tree.grow1()
+			
+			nearest_tree.GrowthStage.SAPLING:
+				animate.play("planting")
+				await animate.animation_finished
+				nearest_tree.grow1()
+			
+			nearest_tree.GrowthStage.TREE:
+				animate.play("chopping")
+				await animate.animation_finished
+				nearest_tree.grow1()
+
+	
