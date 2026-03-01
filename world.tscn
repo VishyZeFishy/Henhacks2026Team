@@ -981,8 +981,14 @@ sources/8 = SubResource("TileSetAtlasSource_ic0uy")
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_70uel"]
 points = PackedVector2Array(133.40881, 158.26141, 47.08545, 247.71344, 282.51282, 247.71344, 196.18945, 158.26141)
 
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_2u3nc"]
+points = PackedVector2Array(987.53076, -1812.5559, 112.50342, -837.5259, 2537.5786, -837.5259, 1712.5532, -1812.5559)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_70uel"]
 size = Vector2(325.00964, 325.0099)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2u3nc"]
+size = Vector2(14, 25)
 
 [node name="Node2D" type="Node2D" unique_id=1614387412]
 
@@ -996,34 +1002,6 @@ layer_1/z_index = -5
 layer_1/tile_data = PackedInt32Array(1179628, 327688, 10, 1114093, 458760, 8, 1179629, 458760, 9, 1114094, 524296, 8, 1179630, 524296, 9, 1114095, 589832, 8, 1179631, 589832, 9, 1048603, 393224, 9, 983068, 458760, 10, 1048604, 458760, 11, 983069, 524296, 10, 1048605, 524296, 11, 983070, 589832, 10, 1048606, 589832, 11, 851961, 393224, 9, 786426, 458760, 10, 851962, 458760, 11, 786427, 524296, 10, 851963, 524296, 11, 786428, 589832, 10, 851964, 589832, 11, 393231, 393224, 9, 327696, 458760, 8, 393232, 458760, 9, 327697, 524296, 8, 393233, 524296, 9, 327698, 589832, 8, 393234, 589832, 9, 196596, 393224, 9, 131061, 458760, 8, 196597, 458760, 9, 131062, 524296, 8, 196598, 524296, 9, 131063, 589832, 8, 196599, 589832, 9, 24, 393224, 9, -65511, 458760, 8, 25, 458760, 9, -65510, 524296, 8, 26, 524296, 9, -65509, 589832, 8, 27, 589832, 9, -589846, 393224, 9, -655381, 458760, 8, -589845, 458760, 9, -655380, 524296, 8, -589844, 524296, 9, -655379, 589832, 8, -589843, 589832, 9, -851955, 393224, 9, -917490, 458760, 10, -851954, 458760, 11, -917489, 524296, 10, -851953, 524296, 11, -917488, 589832, 10, -851952, 589832, 11, -524253, 393224, 9, -589788, 458760, 8, -524252, 458760, 9, -589787, 524296, 8, -524251, 524296, 9, -589786, 589832, 8, -524250, 589832, 9, 917500, 262152, 8, 917501, 327688, 8, 983033, 8, 11, 983034, 65544, 11, 196600, 262152, 10, 196601, 327688, 10, 65525, 262152, 8, 65526, 327688, 8, -655378, 262152, 8, -655377, 327688, 8, -393237, 8, 11, -393236, 65544, 11, -524311, 262152, 8, -524310, 327688, 8, -917487, 262152, 10, -917486, 327688, 10, -1048565, 262152, 8, -1048564, 327688, 8, -720858, 262152, 8, -720857, 327688, 8, -393180, 262152, 10, -393179, 327688, 10, 1179627, 262152, 10, 393235, 262152, 10, 393236, 327688, 10, 1114140, 262152, 8, 1114141, 327688, 8, 786429, 131080, 8, 851965, 131080, 9, 786430, 196616, 8, 851966, 196616, 9, 458769, 131080, 8, 524305, 131080, 9, 458770, 196616, 8, 524306, 196616, 9, -589785, 131080, 8, -524249, 131080, 9, -589784, 196616, 8, -524248, 196616, 9, -589842, 131080, 8, -524306, 131080, 9, -589841, 196616, 8, -524305, 196616, 9, 1179632, 131080, 8, 1245168, 131080, 9, 1179633, 196616, 8, 1245169, 196616, 9, 917497, 8, 10, 917498, 65544, 10, -917493, 8, 8, -851957, 8, 9, -917492, 65544, 8, -851956, 65544, 9, -458773, 8, 10, -458772, 65544, 10, -65508, 8, 8, 28, 8, 9, -65507, 65544, 8, 29, 65544, 9, 196623, 65544, 10, 262159, 65544, 11, 655369, 458760, 10, 720905, 458760, 11, 655370, 524296, 10, 720906, 524296, 11, 655371, 589832, 10, 720907, 589832, 11, 524291, 8, 10, 589827, 8, 11, 524292, 65544, 10, 589828, 65544, 11, 196622, 8, 10, 262158, 8, 11, 196614, 458760, 10, 196615, 524296, 10, 196616, 589832, 10, 327684, 262152, 10, 327685, 327688, 10, 262150, 458760, 11, 262151, 524296, 11, 262152, 589832, 11, 196617, 8, 10, 262153, 8, 11, 196618, 65544, 10, 262154, 65544, 11, -589828, 8, 8, -524292, 8, 9, -589827, 65544, 8, -524291, 65544, 9, -524290, 262152, 8, -524289, 327688, 8, -458757, 262152, 8, -458756, 327688, 8, 524318, 131080, 8, 589854, 131080, 9, 524319, 196616, 8, 589855, 196616, 9, 524320, 262152, 10, 524321, 327688, 10, 589856, 262152, 11, 589857, 327688, 11, 458771, 262152, 11, 458772, 327688, 11)
 layer_2/name = "Layer2"
 layer_2/z_index = -5
-
-[node name="RigidBody2D5" type="RigidBody2D" parent="TileMap" unique_id=1289226834]
-position = Vector2(266, -135)
-gravity_scale = 0.0
-
-[node name="RigidBody2D2" type="RigidBody2D" parent="TileMap" unique_id=713439432]
-position = Vector2(218, -48)
-gravity_scale = 0.0
-
-[node name="RigidBody2D3" type="RigidBody2D" parent="TileMap" unique_id=897676208]
-position = Vector2(436, -96)
-gravity_scale = 0.0
-
-[node name="RigidBody2D6" type="RigidBody2D" parent="TileMap" unique_id=818529556]
-position = Vector2(284, 26)
-gravity_scale = 0.0
-
-[node name="RigidBody2D6" type="RigidBody2D" parent="TileMap/RigidBody2D6" unique_id=1612077897]
-position = Vector2(-323, 74)
-gravity_scale = 0.0
-
-[node name="RigidBody2D9" type="RigidBody2D" parent="TileMap" unique_id=1157509304]
-position = Vector2(379, 86)
-gravity_scale = 0.0
-
-[node name="RigidBody2D11" type="RigidBody2D" parent="TileMap" unique_id=1268211146]
-position = Vector2(120, -208)
-gravity_scale = 0.0
 
 [node name="Tree" parent="TileMap" unique_id=2104442178 instance=ExtResource("1_hiqwa")]
 position = Vector2(80, -48)
@@ -1120,7 +1098,7 @@ flat = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="quitgame/RigidBody2D" unique_id=1144999719]
 position = Vector2(0.50001526, 30.500008)
 scale = Vector2(0.03999877, 0.03999877)
-shape = SubResource("RectangleShape2D_70uel")
+shape = SubResource("ConvexPolygonShape2D_2u3nc")
 
 [node name="Clicking_numbers" type="Label" parent="." unique_id=1987098584]
 offset_left = 212.0
@@ -1147,32 +1125,94 @@ position = Vector2(0.50001526, 30.500008)
 scale = Vector2(0.03999877, 0.03999877)
 shape = SubResource("RectangleShape2D_70uel")
 
-[node name="Tree" parent="." unique_id=341265348 instance=ExtResource("1_hiqwa")]
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=42129159]
 position = Vector2(206, 60)
+gravity_scale = 0.0
 
-[node name="Tree2" parent="." unique_id=1770712222 instance=ExtResource("1_hiqwa")]
+[node name="Tree" parent="RigidBody2D" unique_id=341265348 instance=ExtResource("1_hiqwa")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=517646881]
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_2u3nc")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="." unique_id=737941410]
 position = Vector2(423, 102)
+gravity_scale = 0.0
 
-[node name="Tree3" parent="." unique_id=895488669 instance=ExtResource("1_hiqwa")]
+[node name="Tree2" parent="RigidBody2D2" unique_id=1770712222 instance=ExtResource("1_hiqwa")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2" unique_id=558092817]
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_2u3nc")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="." unique_id=927203901]
 position = Vector2(344, -28)
+gravity_scale = 0.0
 
-[node name="Tree4" parent="." unique_id=2117573260 instance=ExtResource("1_hiqwa")]
+[node name="Tree3" parent="RigidBody2D3" unique_id=895488669 instance=ExtResource("1_hiqwa")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3" unique_id=224645878]
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_2u3nc")
+
+[node name="RigidBody2D9" type="RigidBody2D" parent="." unique_id=1430880938]
 position = Vector2(-101, -2)
 
-[node name="Tree5" parent="." unique_id=29863913 instance=ExtResource("1_hiqwa")]
-position = Vector2(-213, 20)
+[node name="Tree4" parent="RigidBody2D9" unique_id=2117573260 instance=ExtResource("1_hiqwa")]
 
-[node name="Tree6" parent="." unique_id=310685508 instance=ExtResource("1_hiqwa")]
-position = Vector2(-142, 121)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D9" unique_id=1006323637]
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_2u3nc")
 
-[node name="Tree7" parent="." unique_id=2054344777 instance=ExtResource("1_hiqwa")]
-position = Vector2(90, 189)
+[node name="RigidBody2D8" type="RigidBody2D" parent="." unique_id=544713011]
+position = Vector2(-101, -2)
 
-[node name="Tree8" parent="." unique_id=205367884 instance=ExtResource("1_hiqwa")]
-position = Vector2(558, -161)
+[node name="Tree5" parent="RigidBody2D8" unique_id=29863913 instance=ExtResource("1_hiqwa")]
+position = Vector2(-112, 22)
 
-[node name="Tree9" parent="." unique_id=373356592 instance=ExtResource("1_hiqwa")]
-position = Vector2(-357, 256)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D8" unique_id=713685591]
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_2u3nc")
+
+[node name="RigidBody2D7" type="RigidBody2D" parent="." unique_id=1644577258]
+position = Vector2(-101, -2)
+
+[node name="Tree6" parent="RigidBody2D7" unique_id=310685508 instance=ExtResource("1_hiqwa")]
+position = Vector2(-41, 123)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D7" unique_id=1115207200]
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_2u3nc")
+
+[node name="RigidBody2D6" type="RigidBody2D" parent="." unique_id=1459400642]
+position = Vector2(-101, -2)
+
+[node name="Tree7" parent="RigidBody2D6" unique_id=2054344777 instance=ExtResource("1_hiqwa")]
+position = Vector2(191, 191)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D6" unique_id=1672160489]
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_2u3nc")
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="." unique_id=932446436]
+position = Vector2(-101, -2)
+
+[node name="Tree8" parent="RigidBody2D5" unique_id=205367884 instance=ExtResource("1_hiqwa")]
+position = Vector2(659, -159)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D5" unique_id=1652402437]
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_2u3nc")
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="." unique_id=1330182976]
+position = Vector2(-101, -2)
+
+[node name="Tree9" parent="RigidBody2D4" unique_id=373356592 instance=ExtResource("1_hiqwa")]
+position = Vector2(-256, 258)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4" unique_id=1836151395]
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_2u3nc")
 
 [connection signal="pressed" from="singleincrementtext/RigidBody2D/singleincrement" to="singleincrementtext" method="_on_singleincrement_pressed"]
 [connection signal="pressed" from="double_increment/RigidBody2D/double_increment_button" to="double_increment" method="_on_double_increment_button_pressed"]
