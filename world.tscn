@@ -234,5 +234,5 @@ position = Vector2(193, 96)
 zoom = Vector2(3.57, 3.57)
 
 [node name="Theguy" parent="." unique_id=1929062567 instance=ExtResource("3_tlwt5")]
-position = Vector2(138, 111)
+position = Vector2(175, 56)
 scale = Vector2(0.125, 0.125)
