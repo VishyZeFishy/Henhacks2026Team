@@ -1163,6 +1163,7 @@ uppercase = true
 script = ExtResource("11_70uel")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="double_increment" unique_id=221552756]
+gravity_scale = 0.0
 
 [node name="double_increment_button" type="Button" parent="double_increment/RigidBody2D" unique_id=1236847741]
 offset_left = 27.23468
@@ -1173,7 +1174,9 @@ scale = Vector2(0.2669581, 0.2669581)
 icon = ExtResource("13_2o6r5")
 flat = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="double_increment/RigidBody2D/double_increment_button" unique_id=1216691874]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="double_increment/RigidBody2D" unique_id=1216691874]
+position = Vector2(27.23468, -71.63988)
+scale = Vector2(0.2669581, 0.2669581)
 shape = SubResource("ConvexPolygonShape2D_70uel")
 
 [node name="Clicking_numbers" type="Label" parent="." unique_id=1987098584]
@@ -1186,6 +1189,7 @@ text = "0
 script = ExtResource("11_k3n1d")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="Clicking_numbers" unique_id=1677946090]
+gravity_scale = 0.0
 
 [node name="ClickingButton" type="Button" parent="Clicking_numbers/RigidBody2D" unique_id=340854743]
 offset_left = -6.0
@@ -1195,8 +1199,9 @@ offset_bottom = 352.0
 scale = Vector2(0.03999877, 0.03999877)
 icon = ExtResource("10_ic0uy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clicking_numbers/RigidBody2D/ClickingButton" unique_id=31651675]
-position = Vector2(162.50537, 162.50513)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clicking_numbers/RigidBody2D" unique_id=31651675]
+position = Vector2(0.50001526, 30.500008)
+scale = Vector2(0.03999877, 0.03999877)
 shape = SubResource("RectangleShape2D_70uel")
 
 [connection signal="pressed" from="double_increment/RigidBody2D/double_increment_button" to="double_increment" method="_on_double_increment_button_pressed"]
