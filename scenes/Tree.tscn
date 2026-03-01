@@ -22,6 +22,8 @@ tree = NodePath("tree")
 sapling = NodePath("sapling")
 soil = NodePath("soil")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1796853158]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1248298318 groups=["Trees"]]
 position = Vector2(0.006768942, -16.788097)
 rotation = -1.580304

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://djelt2jrjcrub"]
 
-[ext_resource type="Script" uid="uid://x1n87u88b4i7" path="res://scenes/title.gd" id="1_4ignj"]
+[ext_resource type="Script" uid="uid://x1n87u88b4i7" path="res://scripts/title.gd" id="1_4ignj"]
 [ext_resource type="Texture2D" uid="uid://bu8yblwijcgqf" path="res://assets/titlenew.png" id="2_p6dhs"]
 [ext_resource type="FontFile" uid="uid://c2wnv4lol7rcj" path="res://assets/fonts/pixelFont-7-8x14-sproutLands.ttf" id="3_pyl7j"]
 

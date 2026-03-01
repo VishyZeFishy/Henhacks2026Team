@@ -1,7 +1,7 @@
 extends Node2D
 
 func _on_credits_pressed() -> void:
-	var path_to_node = "res://scenes/credits.tscn"
+	var path_to_node = "res://scenes/title.tscn"
 	get_tree().change_scene_to_file(path_to_node)
 
 
