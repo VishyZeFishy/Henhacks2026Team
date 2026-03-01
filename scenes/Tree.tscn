@@ -7,18 +7,42 @@
 atlas = ExtResource("1_2cic4")
 region = Rect2(3.01054, 447.53058, 26.12246, 32.86374)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_omb14"]
+atlas = ExtResource("1_2cic4")
+region = Rect2(32.687042, 483.67172, 31.205185, 24.804138)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvbew"]
+atlas = ExtResource("1_2cic4")
+region = Rect2(-0.25391388, 386.41187, 33.13761, 28.80423)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qvbew"]
 size = Vector2(14, 20)
 
-[node name="Tree" type="Area2D" unique_id=2104442178]
+[node name="Tree" type="Area2D" unique_id=2104442178 node_paths=PackedStringArray("tree", "sapling", "soil")]
 script = ExtResource("1_omb14")
+tree = NodePath("tree")
+sapling = NodePath("sapling")
+soil = NodePath("soil")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1204987900]
+[node name="tree" type="Sprite2D" parent="." unique_id=1204987900]
 position = Vector2(0, -16)
 texture = SubResource("AtlasTexture_874r4")
+
+[node name="soil" type="Sprite2D" parent="." unique_id=2091924038]
+visible = false
+position = Vector2(-0.3749999, -3)
+scale = Vector2(0.733871, 0.25)
+texture = SubResource("AtlasTexture_omb14")
+
+[node name="sapling" type="Sprite2D" parent="." unique_id=1593149818]
+visible = false
+position = Vector2(0, -7.0000005)
+scale = Vector2(0.40151516, 0.46428576)
+texture = SubResource("AtlasTexture_qvbew")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1248298318 groups=["Trees"]]
 position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_qvbew")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="hidden" from="CollisionShape2D" to="." method="_on_collision_shape_2d_hidden"]

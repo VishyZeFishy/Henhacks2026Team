@@ -40,7 +40,8 @@ func _physics_process(delta: float) -> void:
 	#if (not velocity.x or not velocity.y):
 	#	$AnimatedSprite2D2.play("idle")
 	
-	
+func _on_body_entered(body: Node2D) -> void:
+	body.hide()
 	if Input.is_action_just_pressed("chop"):
 		$AnimatedSprite2D2.play("chopping")
 		
