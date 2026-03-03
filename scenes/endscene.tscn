@@ -38,8 +38,7 @@ offset_right = 298.0
 offset_bottom = 280.0
 theme_override_fonts/font = ExtResource("2_pvywr")
 theme_override_font_sizes/font_size = 32
-text = "MAIN MENU
-
+text = "CREDITS
 "
 
 [node name="sentence2" type="Label" parent="." unique_id=707454558]

@@ -2,7 +2,7 @@ extends Node
 
 var stage = 2
 
-var wood = 0
+var wood = 100000
 
 var level = 1
 

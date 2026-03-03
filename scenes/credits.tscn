@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://dw08dbucjhs78" path="res://scripts/credits.gd" id="1_0ctdu"]
 [ext_resource type="Texture2D" uid="uid://c38yphk17pi54" path="res://assets/backgroundthing.png" id="2_2fbfq"]
 [ext_resource type="FontFile" uid="uid://c2wnv4lol7rcj" path="res://assets/fonts/pixelFont-7-8x14-sproutLands.ttf" id="3_8gwij"]
+[ext_resource type="Texture2D" uid="uid://cc125q0ixn3ks" path="res://assets/vish.png" id="4_kyhnv"]
+[ext_resource type="Texture2D" uid="uid://dapy3y1wmifeq" path="res://assets/Charactersyay.png" id="5_ooihk"]
+[ext_resource type="Texture2D" uid="uid://y8o6o711tmh3" path="res://assets/nick.png" id="6_ih6pn"]
+[ext_resource type="Texture2D" uid="uid://blp4pc3vbxemy" path="res://assets/henhacks.png" id="7_7lgdl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mah5v"]
 atlas = ExtResource("2_2fbfq")
@@ -40,6 +44,129 @@ theme_override_fonts/font = ExtResource("3_8gwij")
 theme_override_font_sizes/font_size = 32
 text = "MAIN MENU
 "
+
+[node name="Vish" type="Sprite2D" parent="." unique_id=1918921437]
+position = Vector2(-454, 222)
+scale = Vector2(2.3203125, 2.2890625)
+texture = ExtResource("4_kyhnv")
+
+[node name="Charactersyay" type="Sprite2D" parent="." unique_id=1682919278]
+position = Vector2(-453, 47)
+scale = Vector2(2.3125, 2.421875)
+texture = ExtResource("5_ooihk")
+
+[node name="Nick" type="Sprite2D" parent="." unique_id=809761209]
+position = Vector2(-458, -129)
+scale = Vector2(2.2265625, 2.2031248)
+texture = ExtResource("6_ih6pn")
+
+[node name="sentence2" type="Label" parent="." unique_id=219538723]
+offset_left = 130.0
+offset_top = 124.0
+offset_right = 844.0
+offset_bottom = 280.0
+scale = Vector2(0.4773327, 0.54438955)
+theme_override_fonts/font = ExtResource("3_8gwij")
+theme_override_font_sizes/font_size = 64
+text = "Made for henhacks 2026"
+uppercase = true
+
+[node name="sentence2" type="Label" parent="sentence2" unique_id=1807214377]
+layout_mode = 0
+offset_left = -1047.4874
+offset_top = -431.67618
+offset_right = -117.03662
+offset_bottom = -275.67618
+scale = Vector2(0.4773327, 0.54438955)
+theme_override_fonts/font = ExtResource("3_8gwij")
+theme_override_font_sizes/font_size = 64
+text = "Computer engineer '29"
+uppercase = true
+
+[node name="sentence3" type="Label" parent="sentence2" unique_id=1371629837]
+layout_mode = 0
+offset_left = -1020.2527
+offset_top = 207.5719
+offset_right = -306.2527
+offset_bottom = 363.57193
+scale = Vector2(0.4773327, 0.54438955)
+theme_override_fonts/font = ExtResource("3_8gwij")
+theme_override_font_sizes/font_size = 64
+text = "chemical engineer '29"
+uppercase = true
+
+[node name="sentence4" type="Label" parent="sentence2" unique_id=549726830]
+layout_mode = 0
+offset_left = 171.78784
+offset_top = 86.335236
+offset_right = 1102.2386
+offset_bottom = 242.33524
+scale = Vector2(0.4773327, 0.54438955)
+theme_override_fonts/font = ExtResource("3_8gwij")
+theme_override_font_sizes/font_size = 64
+text = "Theme: the wild, wild west"
+uppercase = true
+
+[node name="sentence1" type="Label" parent="." unique_id=1334565674]
+offset_left = -533.0
+offset_top = -296.0
+offset_right = 332.0
+offset_bottom = -140.0
+scale = Vector2(0.4773327, 0.54438955)
+theme_override_fonts/font = ExtResource("3_8gwij")
+theme_override_font_sizes/font_size = 132
+text = "Meet the team"
+uppercase = true
+
+[node name="sentence2" type="Label" parent="sentence1" unique_id=853033878]
+layout_mode = 0
+offset_left = 362.43066
+offset_top = 666.802
+offset_right = 1292.8813
+offset_bottom = 822.802
+scale = Vector2(0.4773327, 0.54438955)
+theme_override_fonts/font = ExtResource("3_8gwij")
+theme_override_font_sizes/font_size = 64
+text = "Electrical engineer '29"
+uppercase = true
+
+[node name="Henhacks" type="Sprite2D" parent="." unique_id=680156113]
+position = Vector2(299, -90)
+scale = Vector2(5.890625, 5.890625)
+texture = ExtResource("7_7lgdl")
+
+[node name="sentence3" type="Label" parent="." unique_id=405274880]
+offset_left = -368.0
+offset_top = -165.0
+offset_right = 346.0
+offset_bottom = -9.0
+scale = Vector2(0.4773327, 0.54438955)
+theme_override_fonts/font = ExtResource("3_8gwij")
+theme_override_font_sizes/font_size = 64
+text = "Nick"
+uppercase = true
+
+[node name="sentence4" type="Label" parent="." unique_id=1508888141]
+offset_left = -362.0
+offset_top = 16.999998
+offset_right = 352.0
+offset_bottom = 173.0
+scale = Vector2(0.4773327, 0.54438955)
+theme_override_fonts/font = ExtResource("3_8gwij")
+theme_override_font_sizes/font_size = 64
+text = "alexis"
+uppercase = true
+
+[node name="sentence5" type="Label" parent="." unique_id=2118950146]
+offset_left = -357.99997
+offset_top = 190.0
+offset_right = 356.00003
+offset_bottom = 346.0
+scale = Vector2(0.4773327, 0.54438955)
+theme_override_fonts/font = ExtResource("3_8gwij")
+theme_override_font_sizes/font_size = 64
+text = "vish"
+uppercase = true
 
 [connection signal="pressed" from="playagain" to="." method="_on_playagain_pressed"]
 [connection signal="pressed" from="titlepage" to="." method="_on_titlepage_pressed"]
